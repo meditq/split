@@ -1,6 +1,11 @@
 # libsplit
 文字列を分割するライブラリ
 
+## How to use
+```make libsplit```で静的ライブラリ(libsplit.a)が生成されます。
+
+```make testsplit```でテスト用プログラムが生成されます。
+
 ## split(3)
 ### 名前
 split - 文字列を分割する
@@ -44,3 +49,24 @@ int main(void){
 
 ### 著者
 2020 medit.
+
+### 関連項目
+**testsplit**(1)
+
+## testsplit(1)
+### 名前
+testsplit - libsplitのテスト用プログラム
+
+### 書式
+```testsplit```
+
+### 説明
+**testsplit**は、対話型シェルライクのプログラムです。入力された文字列を**split**(3)に通した結果を見やすく表示します。
+
+```exit```とタイプするか、**EOF**を送ることで終了できます。
+
+### 著者
+2020 medit.
+
+### 関連項目
+**split**(3)
