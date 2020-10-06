@@ -4,19 +4,19 @@
 
 int split(char *str, char ***list){
 	int n = 0;
-	char *s = str, *t, **tmp;
+	char *t, **tmp;
 	if(!str) return 0;
 	*list = NULL;
 	while(1){
-		while(*s == ' ') s++;
-		if(!*s) break;
-		if(t = strchr(s, ' ')) *t = '\0';
+		while(*str == ' ') str++;
+		if(!*str) break;
+		if(t = strchr(str, ' ')) *t = '\0';
 		tmp = realloc(*list, sizeof(char *) * (n + 1));
 		if(!tmp) break;
-		tmp[n++] = s;
+		tmp[n++] = str;
 		*list = tmp;
 		if(!t) break;
-		s = t + 1;
+		str = t + 1;
 	}
 	return n;
 }
