@@ -7,8 +7,8 @@ libsplit.a: split.o
 
 split.o: split.h
 
-testsplit: libsplit testsplit.o
-	gcc -o $@ testsplit.o libsplit.a
+testsplit: testsplit.o libsplit.a
+	gcc -o $@ $^
 
 testsplit.o: split.h
 
