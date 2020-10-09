@@ -11,7 +11,7 @@ int split(char *str, char ***list){
 		while(*str == ' ') str++;
 		if(!*str) break;
 		if(t = strchr(str, ' ')) *t = '\0';
-		tmp = realloc(*list, sizeof(char *) * (n + 1));
+		tmp = (char **)realloc(*list, sizeof(char *) * (n + 1));
 		if(!tmp) break;
 		tmp[n++] = str;
 		*list = tmp;
