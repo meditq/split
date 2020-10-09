@@ -5,8 +5,8 @@
 int split(char *str, char ***list){
 	int n = 0;
 	char *t, **tmp;
-	if(str == NULL) return 0;
 	*list = NULL;
+	if(str == NULL) return 0;
 	while(1){
 		while(*str == ' ') str++;
 		if(*str == '\0') break;
