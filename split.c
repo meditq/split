@@ -1,21 +1,22 @@
+#include "split.h"
 #include <stdlib.h>
 #include <string.h>
-#include "split.h"
 
 int split(char *str, char ***list){
 	int n = 0;
 	char *t, **tmp;
-	if(!str) return 0;
+	if(str == NULL) return 0;
 	*list = NULL;
 	while(1){
 		while(*str == ' ') str++;
-		if(!*str) break;
-		if(t = strchr(str, ' ')) *t = '\0';
+		if(*str == '\0') break;
+		t = strchr(str, ' ');
+		if(t != NULL) *t = '\0';
 		tmp = (char **)realloc(*list, sizeof(char *) * (n + 1));
-		if(!tmp) break;
+		if(tmp == NULL) break;
 		tmp[n++] = str;
 		*list = tmp;
-		if(!t) break;
+		if(t == NULL) break;
 		str = t + 1;
 	}
 	return n;
