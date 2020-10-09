@@ -70,3 +70,6 @@ Copyright (c) 2020 medit
 
 ### 関連項目
 **split**(3)
+
+## ライセンス
+All source codes in this repository are available under [MIT License](./LICENSE).
