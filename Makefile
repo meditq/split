@@ -14,3 +14,6 @@ testsplit.o: split.h
 
 .c.o: 
 	gcc -c $<
+
+clean: 
+	rm -f libsplit.a testsplit *.o
